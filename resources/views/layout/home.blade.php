@@ -5,20 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Admin Panel') | Management System</title>
     
-    {{-- Tautkan Tailwind CSS CDN --}}
+    {{-- Tailwind CSS LOCAL (versi 3) --}}
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    {{-- Flowbite CSS (Opsional, tapi Flowbite JS lebih utama) --}}
-    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> --}}
-     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    {{-- WAJIB DITAMBAHKAN: FontAwesome (Untuk Ikon fas fa-clock, fa-arrow-up, dll.) --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
-    
-    {{-- WAJIB DITAMBAHKAN: Chart.js (Untuk <canvas id="paymentChart">) --}}
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    {{-- Fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    {{-- FontAwesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    {{-- Chart.js --}}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     
     <style>
         body { 
@@ -65,17 +62,17 @@
 
                 {{-- 2. Data Transaksi Wisata --}}
                 <li>
-                    <a href="{{ url('transaksi') }}" class="w-full flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ request()->routeIs('transaksi.index') ? 'active-link' : '' }}">
+                    <a href="{{ url('pages/products') }}" class="w-full flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ request()->routeIs('transaksi.index') ? 'active-link' : '' }}">
                         <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm4.008 0a2 2 0 0 1 3.984 0H14a2 2 0 1 1 4 0h2v12H18a2 2 0 1 1-4 0h-4.008a2 2 0 1 1-3.984 0H4V6h2.008Z" clip-rule="evenodd"/>
                         </svg>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Data Transaksi Wisata</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap">Data Stock</span>
                     </a>
                 </li>
 
                 {{-- 3. Data Booking Parkir --}}
                 <li>
-                    <a href="{{ url('parkir') }}" class="w-full flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ request()->routeIs('parkir.index') ? 'active-link' : '' }}">
+                    <a href="{{ url('pages/stocks') }}" class="w-full flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ request()->routeIs('parkir.index') ? 'active-link' : '' }}">
                         <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M17 7a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v1H4.972a2 2 0 0 0-1.982 2.307l1.178 7.657A2 2 0 0 0 6.146 20H17.854a2 2 0 0 0 1.978-1.693l1.178-7.657A2 2 0 0 0 19.028 8H17V7Z" clip-rule="evenodd"/>
                         </svg>

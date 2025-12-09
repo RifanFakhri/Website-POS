@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductStockController;
+use App\Http\Controllers\TransactionController;
 
 Route::get('/', function () {
     return view('pages.dashboard');
@@ -19,5 +20,6 @@ Route::prefix('pages')->group(function () {
 
     Route::get('stocks', [ProductStockController::class, 'index'])->name('stocks.index');
     Route::post('stocks', [ProductStockController::class, 'store'])->name('stocks.store');
+    Route::resource('transactions', TransactionController::class);
     
 });

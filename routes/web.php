@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductStockController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\PosController;
 
 Route::get('/', function () {
     return view('pages.dashboard');
@@ -12,7 +13,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
-
+ Route::get('/pos', [PosController::class, 'index'])->name('pos.index');
 // GROUP ROUTE dengan PREFIX 'pages'
 Route::prefix('pages')->group(function () {
 

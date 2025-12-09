@@ -92,7 +92,7 @@
 
                 {{-- 5. Data Admin --}}
                 <li>
-                    <a href="{{ url('pages/data-admin') }}" class="w-full flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ request()->routeIs('pages.data-admin') ? 'active-link' : '' }}">
+                    <a href="{{ url('pos') }}" class="w-full flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group {{ request()->routeIs('pages.data-admin') ? 'active-link' : '' }}">
                         <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-7.633 12.54a7.002 7.002 0 0 1 11.202-2.427 4.96 4.96 0 0 0-2.348 2.037 4.993 4.993 0 0 0-5.78 3.408A6.975 6.975 0 0 1 4.367 14.54Zm8.777 3.325a2.999 2.999 0 0 1 3.356-.284.75.75 0 0 1 .244 1.12 3.003 3.003 0 0 1-3.878.44c-.31-.225-.516-.56-.547-.94a.75.75 0 0 1 .825-.816l-.001.48Zm.206-4.865a3.003 3.003 0 0 1 3.324 3.906l-2.05-2.05a2.988 2.988 0 0 1-1.274-1.856Zm5.97 1.076a1 1 0 1 1-2 0v-1a1 1 0 1 1 2 0v1Z" clip-rule="evenodd"/>
                             <path d="M19 14v-1a3 3 0 0 0-6 0v1H19Z"/> 
